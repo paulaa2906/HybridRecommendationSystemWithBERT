@@ -1,6 +1,11 @@
+# Urutan ini penting
+Cython
+numpy
+scipy
+
+# Pustaka utama
 streamlit
 pandas
-numpy
 scikit-learn
 scikit-surprise
 torch
