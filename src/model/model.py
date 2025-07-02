@@ -5,6 +5,7 @@ import time
 import functools
 import os
 import pickle
+import gzip
 import sys 
 from scipy.sparse import csr_matrix
 from itertools import combinations
@@ -508,22 +509,41 @@ class SVDMatrixFactorization:
         print(f"Model saved to {filepath}")
         
     def load_model(self, filepath):
-        with open(filepath, 'rb') as f:
-            model_data = pickle.load(f)
+        """
+        Memuat model yang sudah dilatih dari sebuah file.
+        Fungsi ini bisa menangani file pickle biasa (.pkl) atau yang terkompresi (.pkl.gz).
+        """
+        print(f"Mencoba memuat model dari: {filepath}")
+    
+        try:
+            # Cek apakah file terkompresi atau tidak berdasarkan ekstensinya
+            if filepath.endswith(".gz"):
+                # Jika terkompresi, gunakan gzip.open
+                with gzip.open(filepath, 'rb') as f:
+                    model_data = pickle.load(f)
+            else:
+                # Jika tidak, gunakan open biasa
+                with open(filepath, 'rb') as f:
+                    model_data = pickle.load(f)
 
-        self.user_factors = model_data['user_factors']
-        self.item_factors = model_data['item_factors']
-        self.user_bias = model_data['user_bias']
-        self.item_bias = model_data['item_bias']
-        self.user_mapping = model_data['user_to_index']
-        self.item_mapping = model_data['item_to_index']
-        self.reverse_user_mapping = model_data['index_to_user']
-        self.reverse_item_mapping = model_data['index_to_item']
-        self.genre_similarity_matrix = model_data.get('genre_similarity_matrix', None)
-        self.movie_genres = model_data.get('movie_genres', None)
-        self.user_genre_counts = model_data.get('user_genre_counts', None)
+            self.user_factors = model_data['user_factors']
+            self.item_factors = model_data['item_factors']
+            self.user_bias = model_data['user_bias']
+            self.item_bias = model_data['item_bias']
+            self.user_mapping = model_data['user_to_index']
+            self.item_mapping = model_data['item_to_index']
+            self.reverse_user_mapping = model_data['index_to_user']
+            self.reverse_item_mapping = model_data['index_to_item']
+            self.genre_similarity_matrix = model_data.get('genre_similarity_matrix', None)
+            self.movie_genres = model_data.get('movie_genres', None)
+            self.user_genre_counts = model_data.get('user_genre_counts', None)
 
-        print(f"Model loaded from {filepath}")
+            print(f"Model loaded from {filepath}")
+
+        except FileNotFoundError:
+            print(f"ERROR: File model tidak ditemukan di '{filepath}'. Pastikan path sudah benar.")
+        except Exception as e:
+            print(f"ERROR: Terjadi kesalahan saat memuat model: {e}")
 
     def train(self, train_data, test_data=None, batch_size=1024):
         """
