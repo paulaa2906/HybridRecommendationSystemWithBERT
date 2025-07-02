@@ -1,13 +1,16 @@
 import pandas as pd
-import os
-from dotenv import load_dotenv
 import numpy as np
 
-load_dotenv(".env")
+#load_dotenv(".env")
 
-ratings_path = os.getenv("ratings_path")
-movies_path = os.getenv("movies_path")
-movies_sentiment_path = os.getenv("movie_sentiments")
+# ratings_path = os.getenv("ratings_path")
+# movies_path = os.getenv("movies_path")
+# movies_sentiment_path = os.getenv("movie_sentiments")
+
+ratings_path = "dataset/ratings.csv"
+movies_path = "dataset/movies.csv" 
+movies_sentiment_path = "dataset/movie_sentiments_bert(fadli).csv"
+
 
 def ratings():
     df_ratings = pd.read_csv(ratings_path)
