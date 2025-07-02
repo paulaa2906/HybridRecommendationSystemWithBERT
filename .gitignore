@@ -1,6 +1,3 @@
-# Abaikan semua isi folder saved_models
-saved_models/
-
 # Abaikan file matriks yang sangat besar
 genre_similarity_matrix.pkl
 
