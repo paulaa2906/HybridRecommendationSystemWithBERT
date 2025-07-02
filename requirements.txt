@@ -18,7 +18,7 @@ attrs @ file:///opt/conda/conda-bld/attrs_1642510447205/work
 Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
 autopep8 @ file:///opt/conda/conda-bld/autopep8_1650463822033/work
 Babel @ file:///tmp/build/80754af9/babel_1620871417480/work
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+backcall 
 backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work
 backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work
 backports.weakref
@@ -75,7 +75,7 @@ et-xmlfile
 fastjsonschema @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_b5c1gee32t/croots/recipe/python-fastjsonschema_1661368622875/work
 filelock @ file:///opt/conda/conda-bld/filelock_1647002191454/work
 flake8 @ file:///opt/conda/conda-bld/flake8_1648129545443/work
-Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
+Flask 
 fonttools
 fsspec @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a6evhlwhh2/croots/recipe/fsspec_1659972205208/work
 future @ file:///opt/concourse/worker/volumes/live/f456638c-86a7-4060-7f5f-d499a051219b/volume/future_1607571337593/work
@@ -267,11 +267,11 @@ sortedcollections @ file:///tmp/build/80754af9/sortedcollections_1611172717284/w
 sortedcontainers @ file:///tmp/build/80754af9/sortedcontainers_1623949099177/work
 soupsieve @ file:///tmp/build/80754af9/soupsieve_1636706018808/work
 Sphinx @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_5d9f8d69-b80c-4ca1-8876-1698c70b1faeqe461tx8/croots/recipe/sphinx_1657784127805/work
-sphinxcontrib-applehelp @ file:///home/ktietz/src/ci/sphinxcontrib-applehelp_1611920841464/work
-sphinxcontrib-devhelp @ file:///home/ktietz/src/ci/sphinxcontrib-devhelp_1611920923094/work
+sphinxcontrib-applehelp 
+sphinxcontrib-devhelp 
 sphinxcontrib-htmlhelp @ file:///tmp/build/80754af9/sphinxcontrib-htmlhelp_1623945626792/work
-sphinxcontrib-jsmath @ file:///home/ktietz/src/ci/sphinxcontrib-jsmath_1611920942228/work
-sphinxcontrib-qthelp @ file:///home/ktietz/src/ci/sphinxcontrib-qthelp_1611921055322/work
+sphinxcontrib-jsmath
+sphinxcontrib-qthelp 
 sphinxcontrib-serializinghtml @ file:///tmp/build/80754af9/sphinxcontrib-serializinghtml_1624451540180/work
 spyder @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_97gv8v17po/croots/recipe/spyder_1663056808858/work
 spyder-kernels @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1c7pyd81si/croots/recipe/spyder-kernels_1662457889999/work
