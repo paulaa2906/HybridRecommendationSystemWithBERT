@@ -1,7 +1,6 @@
-# Urutan ini penting
-Cython
+# Dependensi kompilasi, harus diinstal paling pertama
 numpy
-scipy
+Cython
 
 # Pustaka utama
 streamlit
