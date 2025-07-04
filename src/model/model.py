@@ -525,9 +525,9 @@ class SVDMatrixFactorization:
         #     else:
         #         # Jika tidak, gunakan open biasa
         with open(filepath, 'rb') as f:
-            model = pickle.load(f)
+            # model = pickle.load(f)
             # joblib.dump(model, 'HybridRecommendationSystemWithBERT/saved_models/svd_model_0.8503.joblib', compress=3)
-            model_data = joblib.load('HybridRecommendationSystemWithBERT/saved_models/svd_model_0.8503.joblib')
+            model_data = joblib.load(f)
             
             self.user_factors = model_data['user_factors']
             self.item_factors = model_data['item_factors']
