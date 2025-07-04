@@ -1,0 +1,9 @@
+# Abaikan file matriks yang sangat besar
+genre_similarity_matrix.pkl
+
+# Abaikan file-file Python & environment yang umum
+__pycache__/
+*.pyc
+.env
+.vscode/
+.DS_Store
