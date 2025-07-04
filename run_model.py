@@ -36,34 +36,33 @@ def to_dict_genres(genres_data):
         genres_dict[movie_id] = genre_list
     return genres_dict
         
-def get_active_user_input(df_ratings):
-    """Get active user input from terminal with validation"""
-    while True:
-        try:
-            print("\nDaftar 25 User Paling Aktif:")
-            active_users = df_ratings['userId'].value_counts().head(25)
-            for user_id, n_ratings in active_users.items():
-                print(f"User ID: {user_id} - Jumlah Rating: {n_ratings}")
+# def get_active_user_input(df_ratings):
+#     """Get active user input from terminal with validation"""
+#     while True:
+#         try:
+#             print("\nDaftar 25 User Paling Aktif:")
+#             active_users = df_ratings['userId'].value_counts().head(25)
+#             for user_id, n_ratings in active_users.items():
+#                 print(f"User ID: {user_id} - Jumlah Rating: {n_ratings}")
             
-            user_id = int(input("\nMasukkan User ID untuk melihat rekomendasi: "))
+#             user_id = int(input("\nMasukkan User ID untuk melihat rekomendasi: "))
             
-            if user_id not in df_ratings['userId'].unique():
-                print(f"Error: User ID {user_id} tidak ditemukan dalam dataset")
-                continue
+#             if user_id not in df_ratings['userId'].unique():
+#                 print(f"Error: User ID {user_id} tidak ditemukan dalam dataset")
+#                 continue
                 
-            return user_id
+#             return user_id
             
-        except ValueError:
-            print("Error: Masukkan ID berupa angka")
-        except Exception as e:
-            print(f"Error: {str(e)}")
+#         except ValueError:
+#             print("Error: Masukkan ID berupa angka")
+#         except Exception as e:
+#             print(f"Error: {str(e)}")
 
 def run_svd_recommender():
     #total_start_time = time.time()
     df_ratings = ratings()
     df_movies = movies()
     df_movies_sentiment = movies_sentiment()
-
     train_data, test_data = train_test_split(df_ratings, test_size=0.2, random_state=42)
 
     # Parameter model
