@@ -7,9 +7,9 @@ import numpy as np
 # movies_path = os.getenv("movies_path")
 # movies_sentiment_path = os.getenv("movie_sentiments")
 
-ratings_path = "HybridRecommendationSystemWithBERT/dataset/ratings.csv"
-movies_path = "HybridRecommendationSystemWithBERT/dataset/movies.csv" 
-movies_sentiment_path = "HybridRecommendationSystemWithBERT/dataset/movie_sentiments_bert(fadli).csv"
+ratings_path = "dataset/ratings.csv"
+movies_path = "dataset/movies.csv" 
+movies_sentiment_path = "dataset/movie_sentiments_bert(fadli).csv"
 
 
 def ratings():
