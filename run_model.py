@@ -86,7 +86,6 @@ def run_svd_recommender():
         n_epochs=n_epochs
     )
 
-
     svd.load_model("saved_models/svd_model_0.8503.joblib")
     # #transform the movie df
     # if similarity_weight != 0.0 :

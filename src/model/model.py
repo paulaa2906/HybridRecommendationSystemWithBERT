@@ -524,10 +524,9 @@ class SVDMatrixFactorization:
         #             model_data = pickle.load(f)
         #     else:
         #         # Jika tidak, gunakan open biasa
-        with open(filepath, 'rb') as f:
-            # model = pickle.load(f)
-            # joblib.dump(model, 'HybridRecommendationSystemWithBERT/saved_models/svd_model_0.8503.joblib', compress=3)
-            model_data = joblib.load(f)
+        try:
+            with open(filepath, 'rb') as f:
+                model_data = joblib.load(f)
             
             self.user_factors = model_data['user_factors']
             self.item_factors = model_data['item_factors']
@@ -543,10 +542,10 @@ class SVDMatrixFactorization:
 
             print(f"Model loaded from {filepath}")
 
-        # except FileNotFoundError:
-        #     print(f"ERROR: File model tidak ditemukan di '{filepath}'. Pastikan path sudah benar.")
-        # except Exception as e:
-        #     print(f"ERROR: Terjadi kesalahan saat memuat model: {e}")
+        except FileNotFoundError:
+            print(f"ERROR: File model tidak ditemukan di '{filepath}'. Pastikan path sudah benar.")
+        except Exception as e:
+            print(f"ERROR: Terjadi kesalahan saat memuat model: {e}")
 
     def train(self, train_data, test_data=None, batch_size=1024):
         """

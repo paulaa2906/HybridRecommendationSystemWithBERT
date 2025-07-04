@@ -71,9 +71,9 @@ def load_all_data():
         svd_model = run_svd_recommender()
         st.write("SVD model loaded:", svd_model)
         st.write("Files in saved_models:", os.listdir("saved_models"))
-        # if svd_model is None:
-        #     st.error("Gagal memuat model rekomendasi. Aplikasi tidak dapat berjalan.")
-        #     st.stop()
+        if svd_model is None:
+            st.error("Gagal memuat model rekomendasi. Aplikasi tidak dapat berjalan.")
+            st.stop()
         
         try:
             movies_df = pd.read_csv(MOVIES_DATA_PATH)
