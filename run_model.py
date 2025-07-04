@@ -87,7 +87,7 @@ def run_svd_recommender():
     )
 
 
-    svd.load_model("HybridRecommendationSystemWithBERT/saved_models/svd_model_0.8503.joblib")
+    svd.load_model("saved_models/svd_model_0.8503.joblib")
     # #transform the movie df
     # if similarity_weight != 0.0 :
     #     genres_dict = to_dict_genres(df_movies)
