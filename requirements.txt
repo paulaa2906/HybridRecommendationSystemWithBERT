@@ -6,7 +6,6 @@ Cython
 streamlit
 pandas
 scikit-learn
-scikit-surprise
 torch
 transformers
 matplotlib

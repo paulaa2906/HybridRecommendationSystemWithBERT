@@ -9,7 +9,7 @@ from recommendation import get_recommendations_for_user
 
 # --- Konstanta untuk Path File ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "saved_models", "svd_model_0.8503.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "saved_models", "svd_model_0.8503.joblib")
 USER_DATA_PATH = os.path.join(BASE_DIR, "dataset", "ratings.csv")
 MOVIES_DATA_PATH = os.path.join(BASE_DIR, "dataset", "movies.csv")
 SENTIMENT_DATA_PATH = os.path.join(BASE_DIR, "dataset", "movie_sentiments_bert(fadli).csv")
