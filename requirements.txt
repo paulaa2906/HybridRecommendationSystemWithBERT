@@ -13,4 +13,5 @@ matplotlib
 seaborn
 emoji
 nltk
+joblib
 python-dotenv
